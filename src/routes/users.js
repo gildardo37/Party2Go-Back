@@ -6,11 +6,11 @@ const mysqlConnection  = require('../database.js');
 
 // GET all Employees
 router.get('/users', (req, res) => {
-  mysqlConnection.query(`select * from usuarios as u
-  join direcciones as d on d.idDirecciones = u.fkDireccion`, (err, rows, fields) => {
+  mysqlConnection.query(`select * from usuarios as u join direcciones as d on d.idDirecciones = u.fkDireccion`, (err, rows, fields) => {
     if(!err) {
       res.json(rows);
-    } else {
+    } 
+    else {
       console.log(err);
     }
   });  
