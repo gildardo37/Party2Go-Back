@@ -12,6 +12,7 @@ router.get('/users', (req, res) => {
       res.json(rows);
     } else {
       console.log(err);
+      console.log("cambio")
     }
   });  
 });
